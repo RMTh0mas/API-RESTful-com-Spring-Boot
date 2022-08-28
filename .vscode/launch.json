@@ -1,0 +1,14 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Spring Boot-MeuPrimeiroProjetoApplication<meu-primeiro-projeto>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "com.renan.meuprimeiroprojeto.MeuPrimeiroProjetoApplication",
+            "projectName": "meu-primeiro-projeto",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env"
+        }
+    ]
+}
