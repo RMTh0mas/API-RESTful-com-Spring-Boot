@@ -10,15 +10,18 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.renan.meuprimeiroprojeto.dtos.EmpresaDto;
+import com.renan.meuprimeiroprojeto.responses.Response;
 
 @RestController
 @RequestMapping("/meuprimeiroprojeto/empresas")
 public class EmpresaController {
 
     @PostMapping
-    public ResponseEntity<EmpresaDto> cadastrar(@RequestBody EmpresaDto empresaDto){
+    public ResponseEntity<Response<EmpresaDto>> cadastrar(@RequestBody EmpresaDto empresaDto){
+        Response<EmpresaDto> response = new Response<EmpresaDto>();
         empresaDto.setId(1L);
-        return ResponseEntity.ok(empresaDto);
+        response.setData(empresaDto);
+        return ResponseEntity.ok(response);
     }
 
 }
